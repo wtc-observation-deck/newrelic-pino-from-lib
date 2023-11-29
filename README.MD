@@ -1,6 +1,15 @@
 # What is this?
 
-This is a tiny repo for demonstrating the issues with requiring pino from a custom library as opposed to directly via the application.
+This is a tiny repo for demonstrating the issue with sending 'Log' messages from pino to New Relic after importing the pino instance from an externally linked package as opposed to importing pino from the current package being worked on.
+
+```
+// ie.
+import { localLogger } from './utils/local-logger';
+// vs
+import { externallyLinkedLogger } from 'external-logger';
+```
+
+It appears the newrelic agent cannot shim the libraries in a nested dependency.
 
 # How to use
 
