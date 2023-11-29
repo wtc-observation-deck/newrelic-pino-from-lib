@@ -1,0 +1,23 @@
+{
+  "name": "logging-lib",
+  "version": "1.0.4",
+  "description": "A simple logger library",
+  "main": "dist/logger.js",
+  "types": "dist/logger.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "link": "yarn link",
+    "clean": "rimraf dist; rimraf node_modules"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "pino": "^8.16.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.2"
+  }
+}

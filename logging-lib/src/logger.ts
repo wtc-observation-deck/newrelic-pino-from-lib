@@ -1,0 +1,9 @@
+
+import pino from 'pino';
+
+const config = {
+  level: process.env.LOG_LEVEL || 'info',
+};
+
+export const logger = pino(config);
+
